@@ -124,8 +124,8 @@
 
     let currentAudio = null, currentBtn = null;
     const collection = COLLECTIONS["sleep"];
-    const audioBase = "https://ukmrcljpqcmxtmiupcpy.supabase.co/storage/v1/object/public/soundforge-audio/" + collection.audio_folder + "/";
-    const imageBase = "assets/images/" + collection.audio_folder + "/";
+    const audioBase = "https://ukmrcljpqcmxtmiupcpy.supabase.co/storage/v1/object/public/soundforge-audio/" + (collection.image_subdir || collection.audio_folder) + "/";
+    const imageBase = "assets/images/" + (collection.image_subdir || collection.audio_folder) + "/";
     const container = document.getElementById("container");
     let bgmCount = 0;
     let imgCount = 0;
